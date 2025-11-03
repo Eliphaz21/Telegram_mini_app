@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliphaz Food Delivery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff8ec;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff5722;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #666;
+      font-size: 18px;
+    }
+
+    .food-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .food-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .food-card:hover {
+      transform: scale(1.05);
+    }
+
+    .food-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .food-card h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .price {
+      color: #ff5722;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .order-btn {
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .order-btn:hover {
+      background-color: #e64a19;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🍔 Eliphaz Food Delivery</header>
+
+  <section class="hero">
+    <h1>Delicious food, delivered to your door!</h1>
+    <p>Fast, hot, and tasty — just one click away!</p>
+  </section>
+
+  <section class="food-list">
+    <div class="food-card">
+      <img src="./assets/images.jpg" alt="Burger">
+      <h3>Cheese Burger</h3>
+      <p class="price">$8.99</p>
+      <button class="order-btn" onclick="orderNow('Cheese Burger')">Order Now</button>
+    </div>
+
+    <div class="food-card">
+      <img src="./assets/pizza.jpg" alt="Pizza">
+      <h3>Italian Pizza</h3>
+      <p class="price">$10.50</p>
+      <button class="order-btn" onclick="orderNow('Italian Pizza')">Order Now</button>
+    </div>
+
+    <div class="food-card">
+      <img src="./assets/chikenpasta.jpg" alt="Pasta"> 
+      <h3>Chicken Pasta</h3>
+      <p class="price">$9.25</p>
+      <button class="order-btn" onclick="orderNow('Chicken Pasta')">Order Now</button>
+    </div>
+
+    <div class="food-card">
+      <img src="./assets/salad.jpg" alt="Salad">
+      <h3>Healthy Salad</h3>
+      <p class="price">$6.75</p>
+      <button class="order-btn" onclick="orderNow('Healthy Salad')">Order Now</button>
+    </div>
+  </section>
+
+  <footer>© 2025 Eliphaz Food Delivery — Made with ❤️ for food lovers.</footer>
+
+  <script>
+    function orderNow(item) {
+      alert("You ordered: " + item + " 🍴\nYour food is on its way!");
+    }
+  </script>
+
+</body>
+</html>
